@@ -1,0 +1,23 @@
+{% if section.settings.gmaps_link != blank %}
+<section class="gmaps">
+  {{ section.settings.gmaps_link }}
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Google Maps",
+    "settings": [
+      {
+      "type": "html",
+      "id": "gmaps_link",
+      "label": "Google Maps Embed Code"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Google Maps"
+      }
+    ]
+  }
+{% endschema %}

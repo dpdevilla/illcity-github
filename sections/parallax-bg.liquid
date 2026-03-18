@@ -1,0 +1,23 @@
+{% if section.settings.bg_image != blank %}
+<section class="parallax_bg" style="background:url({{ section.settings.bg_image | img_url: 'master' }});">
+  
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Parallax Background",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Parallax Background"
+      }
+    ]
+  }
+{% endschema %}

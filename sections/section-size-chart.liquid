@@ -1,0 +1,48 @@
+<div class="page-width">
+<div class="size-chart_container">
+  {% for block in section.blocks %}
+    {% if block.settings.size_chart_block_image %}
+      <figure>
+        <img src="{{ block.settings.size_chart_block_image | img_url: 'master' }}" alt="Size Chart Block Image">
+      </figure>
+    {% endif %}
+  {% endfor %}
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Size Chart",
+  "class": "size_chart_section",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Size Chart Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "size_chart_block_image",
+          "label": "Size Chart Block Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Size Chart",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "size_chart_block_image": ""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
