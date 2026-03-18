@@ -1,0 +1,126 @@
+figure img {
+  width:100%;
+  height:100%;
+  margin:auto;
+}
+/******
+HEADER STYLE.CSS
+******/
+.header__heading-logo {
+   -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.shopify-section-header-sticky .header__heading-logo-wrapper .header__heading-logo {
+      max-width: 70px;
+}
+
+/******
+HOMEPAGE
+******/
+.slider-mobile-gutter.page-width.image--banner {
+  max-width:1920px;
+}
+
+h1 {
+  text-transform:uppercase;
+}
+.title,
+h2.h1,
+h2.h2{
+    font-weight:500 !important;
+    text-transform:uppercase;
+}
+.quick-add span {
+      background: #202020;
+    color: #fff;
+    padding: 5px;
+    border-radius: 6px;
+    font-weight: 400;
+}
+.parallax_bg {
+    min-height: 500px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+}
+.gmaps {
+  margin-bottom:-10px;
+}
+.heading.inline-richtext {
+  margin-top:20px;
+}
+.slider-counter__link--active.slider-counter__link--dots .dot {
+  color:#fff !important;
+}
+/******
+COLLECTIONS PAGE
+******/
+.collection-hero__inner {
+    min-height: 80px !important;
+}
+.card_sale_price, .wbproduct-container .wbproductdes .price {
+      font-size: 13px !important;
+    font-weight: 400 !important;
+}
+/******
+HOMEPAGE
+******/ 
+.size_chart_section .page-width {
+  max-width:1200px;
+}
+/******
+PRODUCTS PAGE
+******/
+.size_chart img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.product__info-container .price .price-item {
+  font-weight:400 !important;
+}
+/******
+PRODUCTS PAGE
+******/
+.product__shopee-link:before,
+.product__shopee-link:after {
+  display:none;
+}
+/******
+ACCOUNTS PAGE
+******/
+#create_customer label {
+    display:none;
+}
+#create_customer .field > label {
+  display:block;
+}
+
+@media only screen and (min-width: 1200px) {
+
+.slideshow.banner  {
+  min-height:1000px
+}
+  .slideshow__media.banner__media {
+    min-height: 1000px;
+    object-fit: cover; /* Cover the entire area without distortion */
+  }
+ 
+}
+@media only screen and (max-width: 1200px) {
+.parallax_bg {
+  background-attachment:scroll !important;
+  margin-top:50px;
+}
+
+}
+@media only screen and (max-width: 1024px) {
+  .count_t {
+    display:none !important;
+  }
+}
+
