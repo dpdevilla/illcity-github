@@ -1,0 +1,28 @@
+<nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+  <a href="{{ routes.root_url }}">Home</a>
+
+  {% if template contains 'collection' %}
+    {% if collection %}
+      › <span>{{ collection.title }}</span>
+    {% endif %}
+
+  {% elsif template contains 'product' %}
+    {% if product.collections.size > 0 %}
+      {% comment %}Piliin yung collection na hindi All Products{% endcomment %}
+      {% assign primary_collection = product.collections | where: "handle", "all-products" | first %}
+      {% if primary_collection %}
+        {% assign primary_collection = product.collections[1] %}
+      {% else %}
+        {% assign primary_collection = product.collections.first %}
+      {% endif %}
+
+      › <a href="{{ primary_collection.url }}">{{ primary_collection.title }}</a>
+    {% endif %}
+
+    › <span>{{ product.title }}</span>
+
+  {% elsif template contains 'page' %}
+    › <span>{{ page.title }}</span>
+
+  {% endif %}
+</nav>
